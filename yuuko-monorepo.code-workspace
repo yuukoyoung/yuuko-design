@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "./",
+      "name": "yuuko-monorepo"
+    },
+    {
+      "path": "packages/eslint-config",
+      "name": "eslint-config"
+    },
+    {
+      "path": "packages/prettier-config",
+      "name": "prettier-config"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@yuukoyoung/yuuko-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "preinstall": "only-allow pnpm",
+    "commit": "cz",
+    "hooks": "simple-git-hooks",
+    "changeset": "changeset",
+    "release": "changeset publish",
+    "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "lint:eslint": "eslint --fix \"**/*.{js,cjs,mjs,json,jsonc,json5}\"",
+    "lint:prettier": "prettier --write \"**/*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml}\""
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.cjs"
+    }
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "0.4.5",
+    "@changesets/cli": "2.23.0",
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-conventional": "17.0.2",
+    "commitizen": "4.2.4",
+    "commitlint-config-cz": "0.13.3",
+    "cz-customizable": "6.3.0",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-jsonc": "2.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "only-allow": "1.1.0",
+    "prettier": "2.6.2",
+    "simple-git-hooks": "2.8.0"
+  },
+  "packageManager": "pnpm@7.1.1",
+  "engines": {
+    "node": ">=14.19.1"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm exec commitlint -e -V"
+  }
+}

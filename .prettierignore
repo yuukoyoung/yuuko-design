@@ -1,0 +1,12 @@
+.idea
+.vscode
+.DS_store
+node_modules
+dist
+*.log
+
+# lock
+pnpm-lock.yaml
+
+# changeset
+.changeset/*.md

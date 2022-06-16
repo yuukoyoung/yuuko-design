@@ -1,0 +1,19 @@
+{
+  "name": "@yuukoyoung/prettier-config",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "shareable prettier configs",
+  "keywords": [
+    "prettier",
+    "prettierconfig"
+  ],
+  "files": [
+    "**/src"
+  ],
+  "main": "./src/index.cjs",
+  "exports": {
+    ".": "./src/index.cjs"
+  }
+}

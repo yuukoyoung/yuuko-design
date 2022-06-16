@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  NODEJS_VERSION: 14.19.1
+  PNPM_VERSION: 7.1.1
+  PNPM_CACHE_FOLDER: ~/.pnpm-store
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ env.NODEJS_VERSION }}
+        # https://github.com/actions/setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODEJS_VERSION }}
+
+      - name: Setup pnpm ${{ env.PNPM_VERSION }}
+        run: npm install pnpm@${{ env.PNPM_VERSION }} -g
+
+      - name: Setup npm token
+        run: |
+          pnpm config set store-dir ${{ env.PNPM_CACHE_FOLDER }}
+          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Create Release Pull Request or Publish to npm
+        # https://github.com/changesets/action
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release
+          commit: 'chore: version packages'
+          title: 'chore: version packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
