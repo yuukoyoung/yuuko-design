@@ -1,11 +1,14 @@
 .idea
-.vscode
 .DS_store
 node_modules
 dist
 *.log
 
-# lock
+# vscode
+.vscode/*
+!.vscode/settings.json
+
+# pnpm
 pnpm-lock.yaml
 
 # changeset
