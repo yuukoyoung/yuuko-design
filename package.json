@@ -2,6 +2,16 @@
   "name": "@yuukoyoung/yuuko-monorepo",
   "version": "0.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuukoyoung/yuuko-monorepo.git"
+  },
+  "bugs": "https://github.com/yuukoyoung/yuuko-monorepo/issues",
+  "license": "MIT",
+  "author": {
+    "name": "yuuko",
+    "email": "yuukoyoung@outlook.com"
+  },
   "scripts": {
     "preinstall": "only-allow pnpm",
     "commit": "cz",
