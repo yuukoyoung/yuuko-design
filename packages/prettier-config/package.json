@@ -9,8 +9,16 @@
     "prettier",
     "prettierconfig"
   ],
+  "repository": "https://github.com/yuukoyoung/yuuko-monorepo/tree/main/packages/eslint-config",
+  "bugs": "https://github.com/yuukoyoung/yuuko-monorepo/issues",
+  "license": "MIT",
+  "author": {
+    "name": "yuuko",
+    "email": "yuukoyoung@outlook.com"
+  },
   "files": [
-    "**/src"
+    "**/src",
+    "CHANGELOG.md"
   ],
   "main": "./src/index.cjs",
   "exports": {
