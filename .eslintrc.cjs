@@ -1,4 +1,7 @@
 module.exports = {
   root: true,
-  extends: ['@yuukoyoung', '@yuukoyoung/eslint-config/prettier'],
+  extends: [
+    '@yuukoyoung/eslint-config/typescript',
+    '@yuukoyoung/eslint-config/prettier',
+  ],
 };
