@@ -1,5 +1,15 @@
 # @yuukoyoung/eslint-config
 
+## 0.2.0
+
+### Minor Changes
+
+- [#4](https://github.com/yuukoyoung/yuuko-monorepo/pull/4) [`1cfa909`](https://github.com/yuukoyoung/yuuko-monorepo/commit/1cfa9091e0e1dd523df33ac47da8ad1aaf0e91e5) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add typescript configuration
+
+### Patch Changes
+
+- [#4](https://github.com/yuukoyoung/yuuko-monorepo/pull/4) [`bc9d4a6`](https://github.com/yuukoyoung/yuuko-monorepo/commit/bc9d4a6a6c7b57bf2793c78d6eaaf87bbe35ccb4) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add README.md
+
 ## 0.1.1
 
 ### Patch Changes

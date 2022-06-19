@@ -1,5 +1,11 @@
 # @yuukoyoung/prettier-config
 
+## 0.1.2
+
+### Patch Changes
+
+- [#4](https://github.com/yuukoyoung/yuuko-monorepo/pull/4) [`bc9d4a6`](https://github.com/yuukoyoung/yuuko-monorepo/commit/bc9d4a6a6c7b57bf2793c78d6eaaf87bbe35ccb4) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add README.md
+
 ## 0.1.1
 
 ### Patch Changes
