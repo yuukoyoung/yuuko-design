@@ -23,14 +23,18 @@
   "main": "./src/index.cjs",
   "exports": {
     ".": "./src/index.cjs",
+    "./typescript": "./src/typescript.cjs",
     "./prettier": "./src/prettier.cjs"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.28.0",
+    "@typescript-eslint/parser": "5.28.0",
     "eslint": "8.17.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-jsonc": "2.3.0",
     "eslint-plugin-prettier": "4.0.0",
-    "prettier": "2.6.2"
+    "prettier": "2.6.2",
+    "typescript": "4.5.4"
   }
 }
