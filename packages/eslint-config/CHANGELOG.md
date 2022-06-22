@@ -1,5 +1,15 @@
 # @yuukoyoung/eslint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- [`7474bf6`](https://github.com/yuukoyoung/yuuko-monorepo/commit/7474bf6f2121ec352c330c9f33d0cd46fb7bf61f) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add rules
+
+### Patch Changes
+
+- [`befaf10`](https://github.com/yuukoyoung/yuuko-monorepo/commit/befaf105c353275610cb4668a4a1bd6ec86cc5b0) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - update package info
+
 ## 0.2.0
 
 ### Minor Changes

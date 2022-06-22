@@ -1,5 +1,11 @@
 # @yuukoyoung/prettier-config
 
+## 0.1.3
+
+### Patch Changes
+
+- [`befaf10`](https://github.com/yuukoyoung/yuuko-monorepo/commit/befaf105c353275610cb4668a4a1bd6ec86cc5b0) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - update package info
+
 ## 0.1.2
 
 ### Patch Changes
