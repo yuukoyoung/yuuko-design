@@ -71,5 +71,26 @@ module.exports = {
         ],
       },
     },
+    {
+      files: ['tsconfig*.json'],
+      rules: {
+        'jsonc/sort-keys': [
+          'error',
+          {
+            pathPattern: '^$',
+            order: [
+              'extends',
+              'files',
+              'include',
+              'exclude',
+              'compilerOptions',
+              'watchOptions',
+              'typeAcquisition',
+              'references',
+            ],
+          },
+        ],
+      },
+    },
   ],
 };
