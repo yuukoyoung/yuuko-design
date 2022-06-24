@@ -1,11 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: ['*.json'],
-      extends: ['plugin:jsonc/recommended-with-json'],
-    },
-    {
-      files: ['*.jsonc'],
+      files: ['*.json', '*.jsonc'],
       extends: ['plugin:jsonc/recommended-with-jsonc'],
     },
     {
@@ -43,6 +39,8 @@ module.exports = {
               'main',
               'module',
               'browser',
+              'types',
+              'typings',
               'bin',
               'man',
               'directories',
@@ -79,10 +77,10 @@ module.exports = {
           {
             pathPattern: '^$',
             order: [
-              'extends',
               'files',
               'include',
               'exclude',
+              'extends',
               'compilerOptions',
               'watchOptions',
               'typeAcquisition',
