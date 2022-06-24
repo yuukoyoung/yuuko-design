@@ -20,6 +20,16 @@ module.exports = {
     },
   },
   rules: {
+    // eslint
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        block: {
+          balanced: true,
+        },
+      },
+    ],
     'padding-line-between-statements': [
       'error',
       {
@@ -63,6 +73,8 @@ module.exports = {
         next: '*',
       },
     ],
+
+    // eslint-comments
     'eslint-comments/no-unused-disable': 'error',
   },
   overrides: [
