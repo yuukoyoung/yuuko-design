@@ -1,0 +1,15 @@
+{
+  "include": ["./src/index.ts"],
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    /* Emit */
+    /* Specify an output folder for all emitted files. */
+    // "outDir": "./dist/modules",
+    /* Only output d.ts files and not JavaScript files. */
+    "emitDeclarationOnly": true,
+    /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "declaration": true,
+    /* Specify the output directory for generated declaration files. */
+    "declarationDir": "./dist/types"
+  }
+}
