@@ -1,1 +1,1 @@
-# Yuuko Monorepo
+# Yuuko Design
