@@ -3,6 +3,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     /* Emit */
+    /* Disable emitting files from a compilation. */
+    "noEmit": false,
     /* Specify an output folder for all emitted files. */
     // "outDir": "./dist/modules",
     /* Only output d.ts files and not JavaScript files. */

@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    /* Language and Environment */
+    /* Specify what JSX code is generated. */
+    "jsx": "preserve",
+
+    /* Modules */
     /* Specify how TypeScript looks up a file from a given module specifier. */
     "moduleResolution": "node",
     /* Enable importing .json files */
@@ -10,7 +15,8 @@
     "allowJs": true,
 
     /* Emit */
-    "importsNotUsedAsValues": "error" /* Specify emit/checking behavior for imports that are only used for types */,
+    /* Specify emit/checking behavior for imports that are only used for types */
+    "importsNotUsedAsValues": "error",
     /* Set the newline character for emitting files. */
     "newLine": "lf",
     /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
