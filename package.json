@@ -20,7 +20,7 @@
     "release": "changeset publish",
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
     "lint:eslint": "eslint --fix \"**/*.{js,mjs,cjs,ts,json,jsonc,json5}\"",
-    "lint:prettier": "prettier --write \"**/*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml}\""
+    "lint:prettier": "prettier --write \"**/*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml}\""
   },
   "config": {
     "commitizen": {
