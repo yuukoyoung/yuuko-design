@@ -30,7 +30,7 @@ jobs:
       - name: Setup pnpm ${{ env.PNPM_VERSION }}
         run: npm install pnpm@${{ env.PNPM_VERSION }} -g
 
-      - name: Setup npm token
+      - name: Setup npm configuration
         run: |
           pnpm config set store-dir ${{ env.PNPM_CACHE_FOLDER }}
           pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
