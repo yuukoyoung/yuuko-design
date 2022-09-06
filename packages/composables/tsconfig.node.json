@@ -1,0 +1,19 @@
+{
+  "include": ["vite.config.ts"],
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    /* Projects */
+    /* Enable constraints that allow a TypeScript project to be used with project references. */
+    "composite": true,
+
+    /* Language and Environment */
+    /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "lib": [],
+
+    /* Modules */
+    /* Specify the root folder within your source files. */
+    "rootDir": ".",
+    /* Specify type package names to be included without being referenced in a source file. */
+    "types": ["vite/client", "node"]
+  }
+}
