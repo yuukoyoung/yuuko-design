@@ -1,5 +1,11 @@
 # @yuukoyoung/prettier-config
 
+## 0.2.0
+
+### Minor Changes
+
+- [#14](https://github.com/yuukoyoung/yuuko-design/pull/14) [`3d68b6b`](https://github.com/yuukoyoung/yuuko-design/commit/3d68b6b9179830b175c53a41c68ead9082333b68) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - update rules
+
 ## 0.1.3
 
 ### Patch Changes
