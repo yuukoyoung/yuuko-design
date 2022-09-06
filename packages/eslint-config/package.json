@@ -28,6 +28,7 @@
   "exports": {
     ".": "./src/index.cjs",
     "./typescript": "./src/typescript.cjs",
+    "./vue": "./src/vue.cjs",
     "./prettier": "./src/prettier.cjs"
   },
   "devDependencies": {
@@ -38,7 +39,9 @@
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-jsonc": "2.3.0",
     "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-vue": "9.4.0",
     "prettier": "2.6.2",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "vue-eslint-parser": "9.0.3"
   }
 }
