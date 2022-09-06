@@ -1,5 +1,15 @@
 # @yuukoyoung/eslint-config
 
+## 0.4.0
+
+### Minor Changes
+
+- [#14](https://github.com/yuukoyoung/yuuko-design/pull/14) [`97f9302`](https://github.com/yuukoyoung/yuuko-design/commit/97f9302dbb0b5ebcb548c78b6bc101fccef6adaf) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add vue configuration
+
+- [#10](https://github.com/yuukoyoung/yuuko-design/pull/10) [`3488c01`](https://github.com/yuukoyoung/yuuko-design/commit/3488c010f9c849549f6ef7b1bca17dedffa0e783) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add rules
+
+- [#14](https://github.com/yuukoyoung/yuuko-design/pull/14) [`3d68b6b`](https://github.com/yuukoyoung/yuuko-design/commit/3d68b6b9179830b175c53a41c68ead9082333b68) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - update rules
+
 ## 0.3.0
 
 ### Minor Changes
