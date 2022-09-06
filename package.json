@@ -30,6 +30,10 @@
       "config": "./.cz-config.cjs"
     }
   },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,json,jsonc,json5,vue": "eslint",
+    "*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml": "prettier --check"
+  },
   "devDependencies": {
     "@changesets/changelog-github": "0.4.5",
     "@changesets/cli": "2.23.0",
@@ -49,6 +53,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "9.4.0",
     "jsonc-eslint-parser": "2.1.0",
+    "lint-staged": "13.0.3",
     "only-allow": "1.1.0",
     "prettier": "2.6.2",
     "simple-git-hooks": "2.8.0",
