@@ -1,2 +1,2 @@
-export * from './partialByKeys';
-export * from './requiredByKeys';
+export * from './typescript';
+export * from './vue';
