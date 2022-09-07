@@ -1,0 +1,12 @@
+{
+  "pipeline": {
+    "clean": {
+      "dependsOn": [],
+      "outputs": ["dist/**"]
+    },
+    "build": {
+      "dependsOn": ["clean", "^build"],
+      "outputs": ["dist/**"]
+    }
+  }
+}

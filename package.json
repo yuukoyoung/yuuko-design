@@ -18,9 +18,15 @@
     "hooks": "simple-git-hooks",
     "changeset": "changeset",
     "release": "changeset publish",
+    "run:prettier": "prettier \"**/*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml}\"",
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
-    "lint:eslint": "eslint --fix \"**/*.{js,mjs,cjs,ts,json,jsonc,json5,vue}\"",
-    "lint:prettier": "prettier --write \"**/*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml}\""
+    "lint:eslint": "eslint \"**/*.{js,mjs,cjs,ts,json,jsonc,json5,vue}\"",
+    "lint:prettier": "pnpm run run:prettier --check",
+    "fix": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "fix:eslint": "pnpm run lint:eslint --fix",
+    "fix:prettier": "pnpm run run:prettier --write",
+    "clean": "turbo run clean",
+    "build": "turbo run build"
   },
   "config": {
     "commitizen": {
@@ -29,10 +35,6 @@
     "cz-customizable": {
       "config": "./.cz-config.cjs"
     }
-  },
-  "lint-staged": {
-    "*.{js,mjs,cjs,ts,json,jsonc,json5,vue": "eslint",
-    "*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml": "prettier --check"
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.4.5",
@@ -57,6 +59,7 @@
     "only-allow": "1.1.0",
     "prettier": "2.6.2",
     "simple-git-hooks": "2.8.0",
+    "turbo": "1.4.5",
     "typescript": "4.5.4",
     "vue-eslint-parser": "9.0.3"
   },
@@ -66,5 +69,9 @@
   },
   "simple-git-hooks": {
     "commit-msg": "pnpm exec commitlint -e -V"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,json,jsonc,json5,vue": "eslint",
+    "*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml": "prettier --check"
   }
 }

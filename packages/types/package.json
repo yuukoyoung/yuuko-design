@@ -26,9 +26,9 @@
   ],
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "prebuild": "rimraf ./dist",
+    "clean": "rimraf ./dist",
     "build": "tsc --project ./tsconfig.build.json",
-    "prepack": "pnpm run build"
+    "prepack": "turbo run build --filter=@yuukoyoung/types --cwd=../.."
   },
   "devDependencies": {
     "@vueuse/core": "9.1.1",
