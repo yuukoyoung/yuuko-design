@@ -49,7 +49,6 @@ module.exports = {
               'sideEffects',
               'scripts',
               'config',
-              'lint-staged',
               'dependencies',
               'devDependencies',
               'peerDependencies',
