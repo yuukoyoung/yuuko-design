@@ -68,6 +68,7 @@
     "node": ">=14.19.1"
   },
   "simple-git-hooks": {
+    "pre-commit": "lint-staged",
     "commit-msg": "pnpm exec commitlint -e -V"
   },
   "lint-staged": {
