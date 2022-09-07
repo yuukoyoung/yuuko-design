@@ -1,5 +1,11 @@
 # @yuukoyoung/eslint-config
 
+## 0.4.1
+
+### Patch Changes
+
+- [#16](https://github.com/yuukoyoung/yuuko-design/pull/16) [`e915ba0`](https://github.com/yuukoyoung/yuuko-design/commit/e915ba070a55b081e0e04b28c3246d5a943eddd8) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - remove check lint-staged in package.json
+
 ## 0.4.0
 
 ### Minor Changes
