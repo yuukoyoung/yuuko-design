@@ -35,9 +35,9 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prebuild": "rimraf ./dist",
+    "clean": "rimraf ./dist",
     "build": "vue-tsc --noEmit && vite build && vue-tsc --project tsconfig.build.json",
-    "prepack": "pnpm run build"
+    "prepack": "turbo run build --filter=@yuukoyoung/headless-ui --cwd=../.."
   },
   "dependencies": {
     "@vue/reactivity": "3.2.25",

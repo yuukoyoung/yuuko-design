@@ -35,9 +35,9 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prebuild": "rimraf ./dist",
+    "clean": "rimraf ./dist",
     "build": "vite build && tsc --project ./tsconfig.build.json",
-    "prepack": "pnpm run build"
+    "prepack": "turbo run build --filter=@yuukoyoung/composables --cwd=../.."
   },
   "dependencies": {
     "@vueuse/core": "9.1.1",
