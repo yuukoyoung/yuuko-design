@@ -35,8 +35,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "clean": "rimraf ./dist",
     "build": "vue-tsc --noEmit && vite build && vue-tsc --project tsconfig.build.json",
+    "build:clean": "rimraf ./dist",
     "prepack": "turbo run build --filter=@yuukoyoung/headless-ui --cwd=../.."
   },
   "dependencies": {

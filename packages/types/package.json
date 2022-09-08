@@ -26,8 +26,8 @@
   ],
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "clean": "rimraf ./dist",
     "build": "tsc --project ./tsconfig.build.json",
+    "build:clean": "rimraf ./dist",
     "prepack": "turbo run build --filter=@yuukoyoung/types --cwd=../.."
   },
   "devDependencies": {

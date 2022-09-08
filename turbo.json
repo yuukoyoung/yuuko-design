@@ -1,12 +1,20 @@
 {
   "pipeline": {
-    "clean": {
+    "build": {
+      "dependsOn": ["build:clean", "^build"],
+      "outputs": ["dist/**"]
+    },
+    "build:clean": {
       "dependsOn": [],
       "outputs": ["dist/**"]
     },
-    "build": {
-      "dependsOn": ["clean", "^build"],
-      "outputs": ["dist/**"]
+    "test": {
+      "dependsOn": [],
+      "input": ["src/**"]
+    },
+    "coverage": {
+      "dependsOn": [],
+      "input": ["src/**"]
     }
   }
 }
