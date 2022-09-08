@@ -22,7 +22,7 @@
     "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
     "lint:eslint": "eslint \"**/*.{js,mjs,cjs,ts,json,jsonc,json5,vue}\"",
     "lint:prettier": "pnpm run run:prettier --check",
-    "fix": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
     "fix:eslint": "pnpm run lint:eslint --fix",
     "fix:prettier": "pnpm run run:prettier --write",
     "clean": "turbo run clean",
