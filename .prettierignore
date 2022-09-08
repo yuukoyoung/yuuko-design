@@ -13,3 +13,6 @@ pnpm-lock.yaml
 
 # changeset
 .changeset/*.md
+
+# coverage
+coverage

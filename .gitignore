@@ -10,3 +10,9 @@ dist
 
 # pnpm
 .pnpm-store
+
+# turbo
+.turbo
+
+# coverage
+coverage
