@@ -6,8 +6,6 @@ const buttonSemanticsSelectors =
   "input[type='submit'], summary";
 
 function hasButtonSemantics(element: HTMLElement): boolean {
-  console.log('element.tagName', element.tagName);
-
   return element.matches(buttonSemanticsSelectors);
 }
 
