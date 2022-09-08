@@ -4,7 +4,7 @@
 const interactiveContentSelectors =
   'a[href], audio[controls], button, details, embed, iframe, img[usemap], ' +
   "input:not([type='hidden']), label, object[usemap], select, textarea, " +
-  'video[controls], [tabindex]';
+  'video[controls]';
 
 function isInteractiveContent(element: HTMLElement): boolean {
   return element.matches(interactiveContentSelectors);
