@@ -1,5 +1,4 @@
 import { describe, expect, test } from 'vitest';
-import { JSDOM } from 'jsdom';
 import { isInteractiveContent } from '../content';
 
 describe('aria', () => {
