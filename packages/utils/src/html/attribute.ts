@@ -4,8 +4,8 @@
 const disabledAttributeSelectors =
   'button, input, optgroup, option, select, textarea, fieldset, link';
 
-function hasDisabledAttribute(element: HTMLElement): boolean {
+function allowDisabledAttribute(element: HTMLElement): boolean {
   return element.matches(disabledAttributeSelectors);
 }
 
-export { hasDisabledAttribute };
+export { allowDisabledAttribute };
