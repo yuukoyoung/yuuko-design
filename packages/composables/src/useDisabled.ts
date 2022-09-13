@@ -1,5 +1,5 @@
 import { computed, unref } from 'vue';
-import { hasDisabledAttribute } from '@yuukoyoung/utils';
+import { allowDisabledAttribute } from '@yuukoyoung/utils';
 import { resolveUnref } from '@vueuse/core';
 import type { MaybeComputedRef } from '@vueuse/core';
 import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
@@ -13,7 +13,7 @@ function useDisabled(
   const disabled = computed(() => {
     if (
       !computedElement.value ||
-      !hasDisabledAttribute(computedElement.value)
+      !allowDisabledAttribute(computedElement.value)
     ) {
       return undefined;
     }

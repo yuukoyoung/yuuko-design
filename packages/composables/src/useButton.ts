@@ -1,5 +1,5 @@
 import { computed, unref } from 'vue';
-import { hasButtonSemantics } from '@yuukoyoung/utils';
+import { hasImplicitButtonSemantic } from '@yuukoyoung/utils';
 import type { MaybeComputedRef } from '@vueuse/core';
 import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
 import { useDisabled } from './useDisabled';
@@ -17,7 +17,9 @@ function useButton(element: MaybeHTMLElementRef, props: UseButtonProps) {
       return undefined;
     }
 
-    return hasButtonSemantics(computedElement.value) ? undefined : 'button';
+    return hasImplicitButtonSemantic(computedElement.value)
+      ? undefined
+      : 'button';
   });
 
   const type = computed(() => {
