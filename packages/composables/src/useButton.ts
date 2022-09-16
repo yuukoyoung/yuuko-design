@@ -5,11 +5,15 @@ import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
 import { useDisabled } from './useDisabled';
 import { useClickable } from './useClickable';
 
-interface UseButtonProps {
-  isDisabled: MaybeComputedRef<boolean>;
+interface UseButtonOptions {
+  isDisabled?: MaybeComputedRef<boolean>;
 }
 
-function useButton(element: MaybeHTMLElementRef, props: UseButtonProps) {
+function useButton(
+  element: MaybeHTMLElementRef,
+  options: UseButtonOptions = {},
+) {
+  const { isDisabled = false } = options;
   const computedElement = computed(() => unref(element));
 
   const role = computed(() => {
@@ -33,7 +37,7 @@ function useButton(element: MaybeHTMLElementRef, props: UseButtonProps) {
       : undefined;
   });
 
-  const { disabled, ariaDisabled } = useDisabled(element, props.isDisabled);
+  const { disabled, ariaDisabled } = useDisabled(element, { isDisabled });
   const { handleKeydown, handleKeyup, tabindex } = useClickable(element);
 
   return {

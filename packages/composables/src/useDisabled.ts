@@ -4,10 +4,15 @@ import { resolveUnref } from '@vueuse/core';
 import type { MaybeComputedRef } from '@vueuse/core';
 import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
 
+interface useDisabledOptions {
+  isDisabled?: MaybeComputedRef<boolean>;
+}
+
 function useDisabled(
   element: MaybeHTMLElementRef,
-  isDisabled: MaybeComputedRef<boolean>,
+  options: useDisabledOptions = {},
 ) {
+  const { isDisabled = false } = options;
   const computedElement = computed(() => unref(element));
 
   const disabled = computed(() => {
@@ -20,6 +25,7 @@ function useDisabled(
 
     return resolveUnref(isDisabled) ? '' : undefined;
   });
+
   const ariaDisabled = computed(() => {
     if (!computedElement.value || disabled.value !== undefined) {
       return undefined;
