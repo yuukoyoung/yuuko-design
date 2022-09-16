@@ -25,8 +25,8 @@
     "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
     "fix:eslint": "pnpm run lint:eslint --fix",
     "fix:prettier": "pnpm run run:prettier --write",
-    "clean": "turbo run clean",
     "build": "turbo run build",
+    "build:clean": "turbo run build:clean",
     "test": "turbo run test",
     "coverage": "turbo run coverage"
   },
@@ -75,7 +75,7 @@
     "commit-msg": "pnpm exec commitlint -e -V"
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,ts,json,jsonc,json5,vue": "eslint",
-    "*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml": "prettier --check"
+    "*.{js,mjs,cjs,ts,json,jsonc,json5,vue}": "pnpm exec eslint",
+    "*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml}": "pnpm exec prettier --check"
   }
 }
