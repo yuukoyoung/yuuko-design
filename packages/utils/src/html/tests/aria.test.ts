@@ -1,19 +1,30 @@
 import { describe, expect, test } from 'vitest';
-import { hasButtonSemantics } from '../aria';
+import { hasImplicitButtonSemantic } from '../aria';
 
-describe('aria', () => {
-  describe('hasButtonSemantics', () => {
-    test.each([
-      ['button', '<button id="id"></button>', true],
-      ['input[type="button"]', '<input id="id" type="button" />', true],
-      ['div', '<div id="id"></div>', false],
-      ['input[type="text"]', '<input id="id" type="text" />', false],
-      ['div[role="button"]', '<div id="id" role="button"></div>', false],
-    ])('%s', (_name, outerHTML, expected) => {
-      const { window } = new JSDOM(outerHTML);
-      const element = window.document.querySelector('#id');
+describe('file: html/aria.ts', () => {
+  describe('function: hasImplicitButtonSemantic', () => {
+    test('should be defined', () => {
+      expect(hasImplicitButtonSemantic).toBeDefined();
+    });
 
-      expect(hasButtonSemantics(element as HTMLElement)).toBe(expected);
+    test('should return whether the element has implicit button semantic', () => {
+      let element: HTMLElement = document.createElement('button');
+
+      expect(hasImplicitButtonSemantic(element)).toBe(true);
+
+      element = document.createElement('div');
+      expect(hasImplicitButtonSemantic(element)).toBe(false);
+
+      element = document.createElement('input');
+      expect(hasImplicitButtonSemantic(element)).toBe(false);
+
+      element = document.createElement('input');
+      element.setAttribute('type', 'button');
+      expect(hasImplicitButtonSemantic(element)).toBe(true);
+
+      element = document.createElement('div');
+      element.setAttribute('role', 'button');
+      expect(hasImplicitButtonSemantic(element)).toBe(false);
     });
   });
 });

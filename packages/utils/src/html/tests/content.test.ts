@@ -1,18 +1,30 @@
 import { describe, expect, test } from 'vitest';
 import { isInteractiveContent } from '../content';
 
-describe('aria', () => {
-  describe('isInteractiveContent', () => {
-    test.each([
-      ['button', '<button id="id"></button>', true],
-      ['a[href]', '<a id="id" href="xxx" />', true],
-      ['div', '<div id="id"></div>', false],
-      ['a', '<a id="id" />', false],
-    ])('%s', (_name, outerHTML, expected) => {
-      const { window } = new JSDOM(outerHTML);
-      const element = window.document.querySelector('#id');
+describe('file: html/content.ts', () => {
+  describe('function: isInteractiveContent', () => {
+    test('should be defined', () => {
+      expect(isInteractiveContent).toBeDefined();
+    });
 
-      expect(isInteractiveContent(element as HTMLElement)).toBe(expected);
+    test('should return whether the element is interactive content', () => {
+      let element: HTMLElement = document.createElement('button');
+
+      expect(isInteractiveContent(element)).toBe(true);
+
+      element = document.createElement('div');
+      expect(isInteractiveContent(element)).toBe(false);
+
+      element = document.createElement('a');
+      expect(isInteractiveContent(element)).toBe(false);
+
+      element = document.createElement('a');
+      element.setAttribute('href', 'http://example.com/');
+      expect(isInteractiveContent(element)).toBe(true);
+
+      element = document.createElement('div');
+      element.setAttribute('tabindex', '0');
+      expect(isInteractiveContent(element)).toBe(false);
     });
   });
 });

@@ -1,18 +1,25 @@
 import { describe, expect, test } from 'vitest';
-import { hasDisabledAttribute } from '../attribute';
+import { allowDisabledAttribute } from '../attribute';
 
-describe('aria', () => {
-  describe('hasDisabledAttribute', () => {
-    test.each([
-      ['button', '<button id="id"></button>', true],
-      ['fieldset', '<fieldset id="id"></fieldset>', true],
-      ['link', '<link id="id" />', true],
-      ['div', '<div id="id"></div>', false],
-    ])('%s', (_name, outerHTML, expected) => {
-      const { window } = new JSDOM(outerHTML);
-      const element = window.document.querySelector('#id');
+describe('file: html/attribute.ts', () => {
+  describe('function: allowDisabledAttribute', () => {
+    test('should be defined', () => {
+      expect(allowDisabledAttribute).toBeDefined();
+    });
 
-      expect(hasDisabledAttribute(element as HTMLElement)).toBe(expected);
+    test('should return whether the element allow disabled attribute', () => {
+      let element: HTMLElement = document.createElement('button');
+
+      expect(allowDisabledAttribute(element)).toBe(true);
+
+      element = document.createElement('fieldset');
+      expect(allowDisabledAttribute(element)).toBe(true);
+
+      element = document.createElement('link');
+      expect(allowDisabledAttribute(element)).toBe(true);
+
+      element = document.createElement('div');
+      expect(allowDisabledAttribute(element)).toBe(false);
     });
   });
 });
