@@ -14,11 +14,11 @@ const element = ref<HTMLElement | null>(null);
 // props
 const props = withDefaults(
   defineProps<{
-    tag?: string;
+    as?: string;
     isDisabled?: boolean;
   }>(),
   {
-    tag: 'button',
+    as: 'button',
     isDisabled: false,
   },
 );
@@ -52,13 +52,13 @@ const {
 
 <template>
   <component
-    :is="tag"
+    :is="as"
     ref="element"
     :role="role"
     :type="type"
-    :tabindex="tabindex"
     :disabled="disabled"
     :aria-disabled="ariaDisabled"
+    :tabindex="tabindex"
     @click="handleClick"
     @keydown="handleKeydown"
     @keyup="handleKeyup">
