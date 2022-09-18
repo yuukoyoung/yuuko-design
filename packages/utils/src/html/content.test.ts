@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { isInteractiveContent } from '../content';
+import { isInteractiveContent } from './content';
 
 describe('file: html/content.ts', () => {
   describe('function: isInteractiveContent', () => {
