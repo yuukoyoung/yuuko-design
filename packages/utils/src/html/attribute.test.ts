@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { allowDisabledAttribute } from '../attribute';
+import { allowDisabledAttribute } from './attribute';
 
 describe('file: html/attribute.ts', () => {
   describe('function: allowDisabledAttribute', () => {

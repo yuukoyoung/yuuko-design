@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { hasImplicitButtonSemantic } from '../aria';
+import { hasImplicitButtonSemantic } from './aria';
 
 describe('file: html/aria.ts', () => {
   describe('function: hasImplicitButtonSemantic', () => {
