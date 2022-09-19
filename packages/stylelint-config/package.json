@@ -1,0 +1,46 @@
+{
+  "name": "@yuukoyoung/stylelint-config",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "shareable stylelint configs",
+  "keywords": [
+    "stylelint",
+    "stylelintconfig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuukoyoung/yuuko-design.git",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": "https://github.com/yuukoyoung/yuuko-design/issues",
+  "license": "MIT",
+  "author": {
+    "name": "yuuko",
+    "email": "yuukoyoung@outlook.com"
+  },
+  "files": [
+    "**/src",
+    "CHANGELOG.md"
+  ],
+  "main": "./src/index.cjs",
+  "exports": {
+    ".": "./src/index.cjs",
+    "./vue": "./src/vue.cjs",
+    "./prettier": "./src/prettier.cjs",
+    "./scss": "./src/scss/index.cjs",
+    "./scss/vue": "./src/scss/vue.cjs",
+    "./scss/prettier": "./src/scss/prettier.cjs"
+  },
+  "devDependencies": {
+    "postcss": "8.4.16",
+    "postcss-html": "1.5.0",
+    "stylelint": "14.12.0",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-prettier-scss": "0.0.1",
+    "stylelint-config-standard": "28.0.0",
+    "stylelint-config-standard-scss": "5.0.0",
+    "stylelint-config-standard-vue": "1.0.0"
+  }
+}
