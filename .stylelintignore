@@ -1,0 +1,12 @@
+.idea
+.DS_store
+node_modules
+dist
+*.log
+
+# vscode
+.vscode
+*.code-workspace
+
+# coverage
+coverage
