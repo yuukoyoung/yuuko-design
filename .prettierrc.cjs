@@ -1,1 +1,1 @@
-module.exports = require('@yuukoyoung/prettier-config');
+module.exports = require('@yuukoyoung/prettier-config/tailwindcss');
