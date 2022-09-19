@@ -19,11 +19,13 @@
     "changeset": "changeset",
     "release": "changeset publish",
     "run:prettier": "prettier \"**/*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml}\"",
-    "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "lint": "pnpm run lint:eslint && pnpm run lint:stylelint && pnpm run lint:prettier",
     "lint:eslint": "eslint \"**/*.{js,mjs,cjs,ts,json,jsonc,json5,vue}\"",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,less,vue}\"",
     "lint:prettier": "pnpm run run:prettier --check",
-    "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
+    "fix": "pnpm run fix:eslint && pnpm run fix:stylelint && pnpm run fix:prettier",
     "fix:eslint": "pnpm run lint:eslint --fix",
+    "fix:stylelint": "pnpm run lint:stylelint --fix",
     "fix:prettier": "pnpm run run:prettier --write",
     "build": "turbo run build",
     "build:clean": "turbo run build:clean",
@@ -47,6 +49,7 @@
     "@typescript-eslint/parser": "5.28.0",
     "@yuukoyoung/eslint-config": "workspace:*",
     "@yuukoyoung/prettier-config": "workspace:*",
+    "@yuukoyoung/stylelint-config": "workspace:*",
     "commitizen": "4.2.4",
     "commitlint-config-cz": "0.13.3",
     "cz-customizable": "6.3.0",
@@ -60,8 +63,14 @@
     "jsonc-eslint-parser": "2.1.0",
     "lint-staged": "13.0.3",
     "only-allow": "1.1.0",
+    "postcss": "8.4.16",
+    "postcss-html": "1.5.0",
     "prettier": "2.6.2",
     "simple-git-hooks": "2.8.0",
+    "stylelint": "14.12.0",
+    "stylelint-config-prettier-scss": "0.0.1",
+    "stylelint-config-standard-scss": "5.0.0",
+    "stylelint-config-standard-vue": "1.0.0",
     "turbo": "1.4.5",
     "typescript": "4.5.4",
     "vue-eslint-parser": "9.0.3"
@@ -76,6 +85,7 @@
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,json,jsonc,json5,vue}": "pnpm exec eslint",
+    "*.{css,scss,less,vue}": "pnpm exec stylelint",
     "*.{js,mjs,cjs,ts,css,scss,less,json,jsonc,json5,md,html,vue,yml,yaml}": "pnpm exec prettier --check"
   }
 }
