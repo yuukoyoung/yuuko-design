@@ -5,10 +5,9 @@ declare module '*.vue' {
   export default component;
 }
 
-// eslint-disable-next-line vue/prefer-import-from-vue, @typescript-eslint/no-unused-vars
-import { RefUnwrapBailTypes } from '@vue/reactivity';
-
 declare module '@vue/reactivity' {
+  // eslint-disable-next-line vue/prefer-import-from-vue
+  import type { RefUnwrapBailTypes } from '@vue/reactivity';
   export interface RefUnwrapBailTypes {
     runtimeDOMBailTypes: Node | Window;
   }
