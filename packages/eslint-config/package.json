@@ -29,6 +29,7 @@
     ".": "./src/index.cjs",
     "./typescript": "./src/typescript.cjs",
     "./vue": "./src/vue.cjs",
+    "./json": "./src/json.cjs",
     "./prettier": "./src/prettier.cjs"
   },
   "devDependencies": {
