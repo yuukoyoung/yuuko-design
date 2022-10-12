@@ -82,7 +82,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
-    "commit-msg": "pnpm exec commitlint -e -V"
+    "commit-msg": "pnpm exec commitlint --edit --verbose"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,json,jsonc,json5,vue}": "pnpm exec eslint",
