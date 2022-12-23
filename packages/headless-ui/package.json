@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "@vue/reactivity": "3.2.25",
-    "@vueuse/core": "9.1.1",
     "@yuukoyoung/composables": "workspace:*",
     "@yuukoyoung/utils": "workspace:*",
     "vue": "3.2.25"
