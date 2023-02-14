@@ -1,5 +1,11 @@
 # @yuukoyoung/eslint-config
 
+## 0.4.2
+
+### Patch Changes
+
+- [#23](https://github.com/yuukoyoung/yuuko-design/pull/23) [`e7caca9`](https://github.com/yuukoyoung/yuuko-design/commit/e7caca9b5b4b8edf528d610a0187acc68947a1c6) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - extract json configuration
+
 ## 0.4.1
 
 ### Patch Changes

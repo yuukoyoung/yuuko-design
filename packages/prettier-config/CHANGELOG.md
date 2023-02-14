@@ -1,5 +1,11 @@
 # @yuukoyoung/prettier-config
 
+## 0.3.0
+
+### Minor Changes
+
+- [#23](https://github.com/yuukoyoung/yuuko-design/pull/23) [`324ffd5`](https://github.com/yuukoyoung/yuuko-design/commit/324ffd535ae2e6cf0f0545740bd716dc2f719810) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add prettier-plugin-tailwindcss
+
 ## 0.2.0
 
 ### Minor Changes

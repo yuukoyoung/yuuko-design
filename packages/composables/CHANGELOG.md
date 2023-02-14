@@ -1,5 +1,11 @@
 # @yuukoyoung/composables
 
+## 0.2.0
+
+### Minor Changes
+
+- [#23](https://github.com/yuukoyoung/yuuko-design/pull/23) [`8cdf5a2`](https://github.com/yuukoyoung/yuuko-design/commit/8cdf5a27481df2be1994a6a84443bf23affe88e0) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - change param name from isDisabled to disabled
+
 ## 0.1.1
 
 ### Patch Changes
