@@ -5,14 +5,14 @@ import type { MaybeComputedRef } from '@vueuse/core';
 import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
 
 interface useDisabledOptions {
-  isDisabled?: MaybeComputedRef<boolean>;
+  disabled?: MaybeComputedRef<boolean>;
 }
 
 function useDisabled(
   element: MaybeHTMLElementRef,
   options: useDisabledOptions = {},
 ) {
-  const { isDisabled = false } = options;
+  const { disabled: _disabled = false } = options;
   const computedElement = computed(() => unref(element));
 
   const disabled = computed(() => {
@@ -23,7 +23,7 @@ function useDisabled(
       return undefined;
     }
 
-    return resolveUnref(isDisabled) ? '' : undefined;
+    return resolveUnref(_disabled) ? '' : undefined;
   });
 
   const ariaDisabled = computed(() => {
@@ -31,7 +31,7 @@ function useDisabled(
       return undefined;
     }
 
-    return resolveUnref(isDisabled) ? true : undefined;
+    return resolveUnref(_disabled) ? true : undefined;
   });
 
   return { disabled, ariaDisabled };

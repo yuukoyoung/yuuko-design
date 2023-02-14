@@ -42,7 +42,7 @@ describe('file: useDisabled.ts', () => {
         expect(buttonResult.ariaDisabled.value).toBe(undefined);
       });
 
-      test("should return undefined when no 'isDisabled' is passed in", () => {
+      test("should return undefined when no 'disabled' is passed in", () => {
         const buttonResult = useDisabled(ref(buttonElement), {});
 
         expect(buttonResult.disabled.value).toBe(undefined);
@@ -51,7 +51,7 @@ describe('file: useDisabled.ts', () => {
 
       test('should return properly', () => {
         const buttonResult = useDisabled(ref(buttonElement), {
-          isDisabled: ref(true),
+          disabled: ref(true),
         });
 
         expect(buttonResult.disabled.value).toBe('');
@@ -67,7 +67,7 @@ describe('file: useDisabled.ts', () => {
         expect(divResult.ariaDisabled.value).toBe(undefined);
       });
 
-      test("should return undefined when no 'isDisabled' is passed in", () => {
+      test("should return undefined when no 'disabled' is passed in", () => {
         const divResult = useDisabled(ref(divElement), {});
 
         expect(divResult.disabled.value).toBe(undefined);
@@ -76,7 +76,7 @@ describe('file: useDisabled.ts', () => {
 
       test('should return properly', () => {
         const divResult = useDisabled(ref(divElement), {
-          isDisabled: ref(true),
+          disabled: ref(true),
         });
 
         expect(divResult.disabled.value).toBe(undefined);
@@ -86,9 +86,9 @@ describe('file: useDisabled.ts', () => {
 
     test('should update reactively', () => {
       const elementRef = ref(buttonElement);
-      const isDisabledRef = ref(true);
+      const disabledRef = ref(true);
       const { disabled, ariaDisabled } = useDisabled(elementRef, {
-        isDisabled: isDisabledRef,
+        disabled: disabledRef,
       });
 
       expect(disabled.value).toBe('');
@@ -99,8 +99,8 @@ describe('file: useDisabled.ts', () => {
       expect(disabled.value).toBe(undefined);
       expect(ariaDisabled.value).toBe(true);
 
-      // isDisabled: true -> false
-      isDisabledRef.value = false;
+      // disabled: true -> false
+      disabledRef.value = false;
       expect(disabled.value).toBe(undefined);
       expect(ariaDisabled.value).toBe(undefined);
     });

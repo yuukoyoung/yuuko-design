@@ -6,14 +6,14 @@ import { useDisabled } from './useDisabled';
 import { useClickable } from './useClickable';
 
 interface UseButtonOptions {
-  isDisabled?: MaybeComputedRef<boolean>;
+  disabled?: MaybeComputedRef<boolean>;
 }
 
 function useButton(
   element: MaybeHTMLElementRef,
   options: UseButtonOptions = {},
 ) {
-  const { isDisabled = false } = options;
+  const { disabled: _disabled = false } = options;
   const computedElement = computed(() => unref(element));
 
   const role = computed(() => {
@@ -37,7 +37,9 @@ function useButton(
       : undefined;
   });
 
-  const { disabled, ariaDisabled } = useDisabled(element, { isDisabled });
+  const { disabled, ariaDisabled } = useDisabled(element, {
+    disabled: _disabled,
+  });
   const { handleKeydown, handleKeyup, tabindex } = useClickable(element);
 
   return {

@@ -15,11 +15,11 @@ const element = ref<HTMLElement | null>(null);
 const props = withDefaults(
   defineProps<{
     as?: string;
-    isDisabled?: boolean;
+    disabled?: boolean;
   }>(),
   {
     as: 'button',
-    isDisabled: false,
+    disabled: false,
   },
 );
 
@@ -29,7 +29,7 @@ const emit = defineEmits<{
 }>();
 
 function handleClick() {
-  if (props.isDisabled) {
+  if (props.disabled) {
     return;
   }
 
@@ -40,13 +40,13 @@ function handleClick() {
 const {
   role,
   type,
-  disabled,
+  disabled: _disabled,
   ariaDisabled,
   handleKeydown,
   handleKeyup,
   tabindex,
 } = useButton(element, {
-  isDisabled: () => props.isDisabled,
+  disabled: () => props.disabled,
 });
 </script>
 
@@ -56,7 +56,7 @@ const {
     ref="element"
     :role="role"
     :type="type"
-    :disabled="disabled"
+    :disabled="_disabled"
     :aria-disabled="ariaDisabled"
     :tabindex="tabindex"
     @click="handleClick"
