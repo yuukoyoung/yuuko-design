@@ -1,5 +1,20 @@
 # @yuukoyoung/headless-ui
 
+## 0.2.0
+
+### Minor Changes
+
+- [#23](https://github.com/yuukoyoung/yuuko-design/pull/23) [`8cdf5a2`](https://github.com/yuukoyoung/yuuko-design/commit/8cdf5a27481df2be1994a6a84443bf23affe88e0) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - change param name from isDisabled to disabled
+
+### Patch Changes
+
+- [#23](https://github.com/yuukoyoung/yuuko-design/pull/23) [`e972290`](https://github.com/yuukoyoung/yuuko-design/commit/e9722905c80b524e45bb22142259a3bc963e97ab) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - remove unused export
+
+- [#23](https://github.com/yuukoyoung/yuuko-design/pull/23) [`3b23d10`](https://github.com/yuukoyoung/yuuko-design/commit/3b23d10fee44c74fd37dbbae5930d041e782df48) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - fix env.d.ts
+
+- Updated dependencies [[`8cdf5a2`](https://github.com/yuukoyoung/yuuko-design/commit/8cdf5a27481df2be1994a6a84443bf23affe88e0)]:
+  - @yuukoyoung/composables@0.2.0
+
 ## 0.1.1
 
 ### Patch Changes
