@@ -1,1 +1,1 @@
-export * from './button';
+export { HeadlessButton } from './button';
