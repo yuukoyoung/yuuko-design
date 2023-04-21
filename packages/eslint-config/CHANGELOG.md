@@ -1,5 +1,11 @@
 # @yuukoyoung/eslint-config
 
+## 0.4.3
+
+### Patch Changes
+
+- [#24](https://github.com/yuukoyoung/yuuko-design/pull/24) [`e3f83c7`](https://github.com/yuukoyoung/yuuko-design/commit/e3f83c75f317c91943da8f9f7d33157c64ce9d9c) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - turn off '@typescript-eslint/no-var-requires' for non-TS file
+
 ## 0.4.2
 
 ### Patch Changes
