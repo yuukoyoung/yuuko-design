@@ -43,7 +43,8 @@
     "build:clean": "rimraf ./dist",
     "prepack": "turbo run build --filter=@yuukoyoung/yuuko-ui --cwd=../..",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "rimraf ./storybook-static && storybook build"
+    "storybook:build": "rimraf ./storybook-static && storybook build",
+    "storybook:preview": "http-server storybook-static"
   },
   "dependencies": {
     "@yuukoyoung/headless-ui": "workspace:*",
@@ -64,6 +65,7 @@
     "@vitejs/plugin-vue": "3.1.0",
     "@yuukoyoung/utils": "workspace:*",
     "autoprefixer": "10.4.11",
+    "http-server": "14.1.1",
     "postcss": "8.4.16",
     "postcss-import": "15.0.1",
     "react": "18.2.0",

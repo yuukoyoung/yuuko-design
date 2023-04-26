@@ -1,0 +1,49 @@
+name: Storybook
+
+on:
+  push:
+    tags:
+      - '@yuukoyoung/yuuko-ui@*'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  NODEJS_VERSION: 16.20.0
+  PNPM_VERSION: 7.1.1
+  PNPM_CACHE_FOLDER: ~/.pnpm-store
+
+jobs:
+  storybook:
+    name: Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ env.NODEJS_VERSION }}
+        # https://github.com/actions/setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODEJS_VERSION }}
+
+      - name: Setup pnpm ${{ env.PNPM_VERSION }}
+        run: npm install pnpm@${{ env.PNPM_VERSION }} -g
+
+      - name: Setup npm configuration
+        run: |
+          pnpm config set store-dir ${{ env.PNPM_CACHE_FOLDER }}
+          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run storybook:build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: storybook-pages
+          publish_dir: ./storybook-static
