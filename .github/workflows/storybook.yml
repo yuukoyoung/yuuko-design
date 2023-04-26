@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - '@yuukoyoung/yuuko-ui@*'
+  workflow_dispatch:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
