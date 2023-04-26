@@ -251,6 +251,7 @@ importers:
       vue-tsc: 1.0.5
     dependencies:
       '@yuukoyoung/headless-ui': link:../headless-ui
+      '@yuukoyoung/utils': link:../utils
       vue: 3.2.25
     devDependencies:
       '@mertasan/tailwindcss-variables': 2.6.1_6b4luod745iryv24jvdbvzbbsa
@@ -265,7 +266,6 @@ importers:
       '@tailwindcss/nesting': 0.0.0-insiders.565cd3e_postcss@8.4.16
       '@types/node': 18.7.13
       '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.25
-      '@yuukoyoung/utils': link:../utils
       autoprefixer: 10.4.11_postcss@8.4.16
       http-server: 14.1.1
       postcss: 8.4.16

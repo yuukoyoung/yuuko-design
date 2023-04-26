@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@yuukoyoung/headless-ui": "workspace:*",
+    "@yuukoyoung/utils": "workspace:*",
     "vue": "3.2.25"
   },
   "devDependencies": {
@@ -63,7 +64,6 @@
     "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
     "@types/node": "18.7.13",
     "@vitejs/plugin-vue": "3.1.0",
-    "@yuukoyoung/utils": "workspace:*",
     "autoprefixer": "10.4.11",
     "http-server": "14.1.1",
     "postcss": "8.4.16",
