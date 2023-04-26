@@ -1,0 +1,56 @@
+/* base */
+.yu-btn {
+  @apply inline-flex items-center justify-center;
+  @apply cursor-pointer touch-manipulation select-none whitespace-nowrap;
+  @apply outline-none transition-all focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white active:translate-y-[0.0625rem];
+  @apply disabled:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 aria-disabled:translate-y-0 aria-disabled:cursor-not-allowed aria-disabled:opacity-60;
+
+  /* size */
+  &.yu-btn--small {
+    @apply h-6 min-w-[1.5rem] px-2 text-sm;
+  }
+
+  &.yu-btn--medium {
+    @apply h-8 min-w-[2rem] px-3 text-base;
+  }
+
+  &.yu-btn--large {
+    @apply h-10 min-w-[2.5rem] px-4 text-lg;
+  }
+
+  /* compact */
+  &.yu-btn--compact {
+    @apply h-auto min-h-0 px-2;
+  }
+
+  /* variant */
+  &.yu-btn--filled {
+    @apply bg-layer text-white;
+    @apply hover:bg-layer-hover;
+    @apply disabled:bg-layer aria-disabled:bg-layer;
+  }
+
+  &.yu-btn--light {
+    @apply bg-layer-light text-layer;
+    @apply hover:bg-layer-light-hover/80;
+    @apply disabled:bg-layer-light aria-disabled:bg-layer-light;
+  }
+
+  &.yu-btn--default {
+    @apply text-dark-600 border border-gray-400;
+    @apply hover:bg-gray-100;
+    @apply disabled:bg-transparent aria-disabled:bg-transparent;
+  }
+
+  &.yu-btn--outline {
+    @apply text-layer border-layer border;
+    @apply hover:bg-layer-light/60;
+    @apply disabled:bg-transparent aria-disabled:bg-transparent;
+  }
+
+  &.yu-btn--subtle {
+    @apply text-layer;
+    @apply hover:bg-layer-light;
+    @apply disabled:bg-transparent aria-disabled:bg-transparent;
+  }
+}

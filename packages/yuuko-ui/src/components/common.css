@@ -1,0 +1,119 @@
+/* color */
+.yu-color-dark {
+  --yu-colors-layer: var(--yu-colors-dark-600);
+  --yu-colors-layer-hover: var(--yu-colors-dark-700);
+  --yu-colors-layer-light: var(--yu-colors-dark-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-dark-200);
+}
+
+.yu-color-gray {
+  --yu-colors-layer: var(--yu-colors-gray-600);
+  --yu-colors-layer-hover: var(--yu-colors-gray-700);
+  --yu-colors-layer-light: var(--yu-colors-gray-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-gray-200);
+}
+
+.yu-color-red {
+  --yu-colors-layer: var(--yu-colors-red-600);
+  --yu-colors-layer-hover: var(--yu-colors-red-700);
+  --yu-colors-layer-light: var(--yu-colors-red-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-red-200);
+}
+
+.yu-color-pink {
+  --yu-colors-layer: var(--yu-colors-pink-600);
+  --yu-colors-layer-hover: var(--yu-colors-pink-700);
+  --yu-colors-layer-light: var(--yu-colors-pink-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-pink-200);
+}
+
+.yu-color-grape {
+  --yu-colors-layer: var(--yu-colors-grape-600);
+  --yu-colors-layer-hover: var(--yu-colors-grape-700);
+  --yu-colors-layer-light: var(--yu-colors-grape-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-grape-200);
+}
+
+.yu-color-violet {
+  --yu-colors-layer: var(--yu-colors-violet-600);
+  --yu-colors-layer-hover: var(--yu-colors-violet-700);
+  --yu-colors-layer-light: var(--yu-colors-violet-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-violet-200);
+}
+
+.yu-color-indigo {
+  --yu-colors-layer: var(--yu-colors-indigo-600);
+  --yu-colors-layer-hover: var(--yu-colors-indigo-700);
+  --yu-colors-layer-light: var(--yu-colors-indigo-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-indigo-200);
+}
+
+.yu-color-blue {
+  --yu-colors-layer: var(--yu-colors-blue-600);
+  --yu-colors-layer-hover: var(--yu-colors-blue-700);
+  --yu-colors-layer-light: var(--yu-colors-blue-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-blue-200);
+}
+
+.yu-color-cyan {
+  --yu-colors-layer: var(--yu-colors-cyan-600);
+  --yu-colors-layer-hover: var(--yu-colors-cyan-700);
+  --yu-colors-layer-light: var(--yu-colors-cyan-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-cyan-200);
+}
+
+.yu-color-teal {
+  --yu-colors-layer: var(--yu-colors-teal-600);
+  --yu-colors-layer-hover: var(--yu-colors-teal-700);
+  --yu-colors-layer-light: var(--yu-colors-teal-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-teal-200);
+}
+
+.yu-color-green {
+  --yu-colors-layer: var(--yu-colors-green-600);
+  --yu-colors-layer-hover: var(--yu-colors-green-700);
+  --yu-colors-layer-light: var(--yu-colors-green-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-green-200);
+}
+
+.yu-color-lime {
+  --yu-colors-layer: var(--yu-colors-lime-600);
+  --yu-colors-layer-hover: var(--yu-colors-lime-700);
+  --yu-colors-layer-light: var(--yu-colors-lime-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-lime-200);
+}
+
+.yu-color-yellow {
+  --yu-colors-layer: var(--yu-colors-yellow-600);
+  --yu-colors-layer-hover: var(--yu-colors-yellow-700);
+  --yu-colors-layer-light: var(--yu-colors-yellow-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-yellow-200);
+}
+
+.yu-color-orange {
+  --yu-colors-layer: var(--yu-colors-orange-600);
+  --yu-colors-layer-hover: var(--yu-colors-orange-700);
+  --yu-colors-layer-light: var(--yu-colors-orange-100);
+  --yu-colors-layer-light-hover: var(--yu-colors-orange-200);
+}
+
+/* radius */
+.yu-radius-none {
+  @apply rounded-none;
+}
+
+.yu-radius-small {
+  @apply rounded-sm;
+}
+
+.yu-radius-medium {
+  @apply rounded;
+}
+
+.yu-radius-large {
+  @apply rounded-md;
+}
+
+.yu-radius-full {
+  @apply rounded-full;
+}
