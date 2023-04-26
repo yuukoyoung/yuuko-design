@@ -1,5 +1,13 @@
 # @yuukoyoung/headless-ui
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`afc02ed`](https://github.com/yuukoyoung/yuuko-design/commit/afc02edc0b624ee073a0a6603a5cf8d954aa7725)]:
+  - @yuukoyoung/utils@0.2.0
+  - @yuukoyoung/composables@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @yuukoyoung/utils
 
+## 0.2.0
+
+### Minor Changes
+
+- [#29](https://github.com/yuukoyoung/yuuko-design/pull/29) [`afc02ed`](https://github.com/yuukoyoung/yuuko-design/commit/afc02edc0b624ee073a0a6603a5cf8d954aa7725) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add capitalize and uncapitalize function
+
 ## 0.1.1
 
 ### Patch Changes

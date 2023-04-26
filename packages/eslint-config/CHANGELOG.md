@@ -1,5 +1,11 @@
 # @yuukoyoung/eslint-config
 
+## 0.5.0
+
+### Minor Changes
+
+- [`fd4517d`](https://github.com/yuukoyoung/yuuko-design/commit/fd4517d0d912e8607aabcd167f5b0feb4f10de17) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - turn off '@typescript-eslint/no-var-requires' for non-TS file
+
 ## 0.4.2
 
 ### Patch Changes
