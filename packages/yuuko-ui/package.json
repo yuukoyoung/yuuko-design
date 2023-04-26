@@ -43,7 +43,7 @@
     "build:clean": "rimraf ./dist",
     "prepack": "turbo run build --filter=@yuukoyoung/yuuko-ui --cwd=../..",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "rimraf ./storybook-static && storybook build",
+    "storybook:build": "turbo run build --filter=@yuukoyoung/yuuko-ui^... --cwd=../.. && rimraf ./storybook-static && storybook build",
     "storybook:preview": "http-server storybook-static"
   },
   "dependencies": {
