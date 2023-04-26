@@ -1,0 +1,78 @@
+{
+  "name": "@yuukoyoung/yuuko-ui",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "ui for yuuko-design",
+  "keywords": [
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuukoyoung/yuuko-design.git",
+    "directory": "packages/yuuko-ui"
+  },
+  "bugs": "https://github.com/yuukoyoung/yuuko-design/issues",
+  "license": "MIT",
+  "author": {
+    "name": "yuuko",
+    "email": "yuukoyoung@outlook.com"
+  },
+  "files": [
+    "**/dist",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/yuuko-ui.cjs.js",
+  "module": "./dist/yuuko-ui.es.js",
+  "browser": "./dist/yuuko-ui.umd.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/yuuko-ui.cjs.js",
+      "import": "./dist/yuuko-ui.es.js"
+    },
+    "./css": "./dist/yuuko-ui.css"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "pnpm run build:js && pnpm run build:css",
+    "build:js": "vue-tsc --noEmit && vite build && vue-tsc --project tsconfig.build.json",
+    "build:css": "tailwindcss --input ./src/style/index.css --output ./dist/yuuko-ui.css --postcss --minify --config ./tailwind.config.cjs",
+    "build:css:watch": "tailwindcss --input ./src/style/index.css --output ./dist/yuuko-ui.css --watch --postcss --minify --config ./tailwind.config.cjs",
+    "build:clean": "rimraf ./dist",
+    "prepack": "turbo run build --filter=@yuukoyoung/yuuko-ui --cwd=../..",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "rimraf ./storybook-static && storybook build"
+  },
+  "dependencies": {
+    "@yuukoyoung/headless-ui": "workspace:*",
+    "vue": "3.2.25"
+  },
+  "devDependencies": {
+    "@mertasan/tailwindcss-variables": "2.6.1",
+    "@storybook/addon-essentials": "7.0.6",
+    "@storybook/addon-interactions": "7.0.6",
+    "@storybook/addon-links": "7.0.6",
+    "@storybook/addon-styling": "1.0.1",
+    "@storybook/blocks": "7.0.6",
+    "@storybook/testing-library": "0.0.14-next.2",
+    "@storybook/vue3": "7.0.6",
+    "@storybook/vue3-vite": "7.0.6",
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
+    "@types/node": "18.7.13",
+    "@vitejs/plugin-vue": "3.1.0",
+    "@yuukoyoung/utils": "workspace:*",
+    "autoprefixer": "10.4.11",
+    "postcss": "8.4.16",
+    "postcss-import": "15.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rimraf": "3.0.2",
+    "storybook": "7.0.6",
+    "tailwindcss": "3.2.4",
+    "typescript": "4.5.4",
+    "vite": "3.1.0",
+    "vue-tsc": "1.0.5"
+  }
+}
