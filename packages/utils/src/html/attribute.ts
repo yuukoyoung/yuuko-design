@@ -8,4 +8,10 @@ function allowDisabledAttribute(element: HTMLElement): boolean {
   return element.matches(disabledAttributeSelectors);
 }
 
-export { allowDisabledAttribute };
+const hrefAttributeSelector = 'a, area, link';
+
+function allowHrefAttribute(element: HTMLElement): boolean {
+  return element.matches(hrefAttributeSelector);
+}
+
+export { allowDisabledAttribute, allowHrefAttribute };
