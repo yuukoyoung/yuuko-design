@@ -16,7 +16,7 @@ describe('file: common/strings.ts', () => {
     });
 
     describe('when input is not empty string', () => {
-      test('should return empty string', () => {
+      test('should return properly', () => {
         let input = 'hello';
 
         expect(capitalize(input)).toBe('Hello');
@@ -40,7 +40,7 @@ describe('file: common/strings.ts', () => {
     });
 
     describe('when input is not empty string', () => {
-      test('should return empty string', () => {
+      test('should return properly', () => {
         let input = 'HELLO';
 
         expect(uncapitalize(input)).toBe('hELLO');

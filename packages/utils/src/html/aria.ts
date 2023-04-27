@@ -1,5 +1,5 @@
 /**
- * https://www.w3.org/TR/2021/REC-html-aria-20211209/#docconformance-attr
+ * https://www.w3.org/TR/html-aria/#docconformance-attr
  */
 const buttonSemanticSelectors =
   "button, input[type='button'], input[type='image'], input[type='reset'], " +
@@ -9,4 +9,10 @@ function hasImplicitButtonSemantic(element: HTMLElement): boolean {
   return element.matches(buttonSemanticSelectors);
 }
 
-export { hasImplicitButtonSemantic };
+const linkSemanticSelectors = 'a[href], area[href]';
+
+function hasImplicitLinkSemantic(element: HTMLElement): boolean {
+  return element.matches(linkSemanticSelectors);
+}
+
+export { hasImplicitButtonSemantic, hasImplicitLinkSemantic };
