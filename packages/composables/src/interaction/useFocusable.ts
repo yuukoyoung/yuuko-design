@@ -1,6 +1,7 @@
+import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
+
 import { computed, unref } from 'vue';
 import { isInteractiveContent } from '@yuukoyoung/utils';
-import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
 
 function useFocusable(element: MaybeHTMLElementRef) {
   const computedElement = computed(() => unref(element));

@@ -1,9 +1,10 @@
-import { computed, unref } from 'vue';
-import { hasImplicitButtonSemantic } from '@yuukoyoung/utils';
 import type { MaybeComputedRef } from '@vueuse/core';
 import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
-import { useDisabled } from './useDisabled';
-import { useClickable } from './useClickable';
+
+import { computed, unref } from 'vue';
+import { resolveUnref } from '@vueuse/core';
+import { hasImplicitButtonSemantic } from '@yuukoyoung/utils';
+import { useDisabled, useClickable } from '../interaction';
 
 interface UseButtonOptions {
   disabled?: MaybeComputedRef<boolean>;
@@ -40,7 +41,16 @@ function useButton(
   const { disabled, ariaDisabled } = useDisabled(element, {
     disabled: _disabled,
   });
+
   const { handleKeydown, handleKeyup, tabindex } = useClickable(element);
+
+  const _tabindex = computed(() => {
+    if (tabindex.value === undefined) {
+      return undefined;
+    }
+
+    return resolveUnref(_disabled) ? '-1' : tabindex.value;
+  });
 
   return {
     role,
@@ -49,7 +59,7 @@ function useButton(
     ariaDisabled,
     handleKeydown,
     handleKeyup,
-    tabindex,
+    tabindex: _tabindex,
   };
 }
 

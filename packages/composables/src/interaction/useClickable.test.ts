@@ -2,10 +2,12 @@ import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 import { ref } from 'vue';
 import { useClickable } from './useClickable';
 
-describe('file: useClickable.ts', () => {
+describe('file: interaction/useClickable.ts', () => {
   describe('function: useClickable', () => {
     let divElement: HTMLElement;
-    const handleClick = vi.fn(() => console.log('handleClick'));
+    const handleClick = vi.fn(() => {
+      console.log('handleClick');
+    });
     const enterKeyDownEvent = new KeyboardEvent('keydown', { code: 'Enter' });
     const enterKeyUpEvent = new KeyboardEvent('keyup', { code: 'Enter' });
     const spaceKeyDownEvent = new KeyboardEvent('keydown', { code: 'Space' });

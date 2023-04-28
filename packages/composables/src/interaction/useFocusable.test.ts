@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, test } from 'vitest';
 import { ref } from 'vue';
 import { useFocusable } from './useFocusable';
 
-describe('file: useFocusable.ts', () => {
+describe('file: interaction/useFocusable.ts', () => {
   describe('function: useFocusable', () => {
     let buttonElement: HTMLElement;
     let divElement: HTMLElement;
