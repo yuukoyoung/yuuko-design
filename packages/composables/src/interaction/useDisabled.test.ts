@@ -2,7 +2,7 @@ import { describe, expect, test, beforeEach } from 'vitest';
 import { ref } from 'vue';
 import { useDisabled } from './useDisabled';
 
-describe('file: useDisabled.ts', () => {
+describe('file: interaction/useDisabled.ts', () => {
   describe('function: useDisabled', () => {
     let buttonElement: HTMLElement;
     let divElement: HTMLElement;
@@ -35,23 +35,16 @@ describe('file: useDisabled.ts', () => {
     });
 
     describe("when element allows 'disabled' attribute", () => {
-      test("should return undefined when no 'options' is passed in", () => {
+      test('should return properly', () => {
         const buttonResult = useDisabled(ref(buttonElement));
 
         expect(buttonResult.disabled.value).toBe(undefined);
         expect(buttonResult.ariaDisabled.value).toBe(undefined);
       });
 
-      test("should return undefined when no 'disabled' is passed in", () => {
-        const buttonResult = useDisabled(ref(buttonElement), {});
-
-        expect(buttonResult.disabled.value).toBe(undefined);
-        expect(buttonResult.ariaDisabled.value).toBe(undefined);
-      });
-
-      test('should return properly', () => {
+      test("when 'disabled: true' is passed in", () => {
         const buttonResult = useDisabled(ref(buttonElement), {
-          disabled: ref(true),
+          disabled: true,
         });
 
         expect(buttonResult.disabled.value).toBe('');
@@ -60,23 +53,16 @@ describe('file: useDisabled.ts', () => {
     });
 
     describe("when element doesn't allow 'disabled' attribute", () => {
-      test("should return undefined when no 'options' is passed in", () => {
+      test('should return properly', () => {
         const divResult = useDisabled(ref(divElement));
 
         expect(divResult.disabled.value).toBe(undefined);
         expect(divResult.ariaDisabled.value).toBe(undefined);
       });
 
-      test("should return undefined when no 'disabled' is passed in", () => {
-        const divResult = useDisabled(ref(divElement), {});
-
-        expect(divResult.disabled.value).toBe(undefined);
-        expect(divResult.ariaDisabled.value).toBe(undefined);
-      });
-
-      test('should return properly', () => {
+      test("when 'disabled: true' is passed in", () => {
         const divResult = useDisabled(ref(divElement), {
-          disabled: ref(true),
+          disabled: true,
         });
 
         expect(divResult.disabled.value).toBe(undefined);

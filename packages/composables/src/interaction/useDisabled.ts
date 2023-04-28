@@ -1,8 +1,9 @@
-import { computed, unref } from 'vue';
-import { allowDisabledAttribute } from '@yuukoyoung/utils';
-import { resolveUnref } from '@vueuse/core';
 import type { MaybeComputedRef } from '@vueuse/core';
 import type { MaybeHTMLElementRef } from '@yuukoyoung/types';
+
+import { computed, unref } from 'vue';
+import { resolveUnref } from '@vueuse/core';
+import { allowDisabledAttribute } from '@yuukoyoung/utils';
 
 interface useDisabledOptions {
   disabled?: MaybeComputedRef<boolean>;
