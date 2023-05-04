@@ -1,5 +1,13 @@
 # @yuukoyoung/utils
 
+## 0.3.0
+
+### Minor Changes
+
+- [#32](https://github.com/yuukoyoung/yuuko-design/pull/32) [`bd98256`](https://github.com/yuukoyoung/yuuko-design/commit/bd98256f8b81b115bd9d0fabac98c34c130f12d9) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add function allowHrefAttribute
+
+- [#32](https://github.com/yuukoyoung/yuuko-design/pull/32) [`639ba45`](https://github.com/yuukoyoung/yuuko-design/commit/639ba45eaabadd62f6e19f883763225f0977570b) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add function hasImplicitLinkSemantic
+
 ## 0.2.0
 
 ### Minor Changes

@@ -1,5 +1,16 @@
 # @yuukoyoung/composables
 
+## 0.3.0
+
+### Minor Changes
+
+- [#32](https://github.com/yuukoyoung/yuuko-design/pull/32) [`15a0ff6`](https://github.com/yuukoyoung/yuuko-design/commit/15a0ff6c957ed0d496d59e8af6981abfa3046270) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - add function useLink
+
+### Patch Changes
+
+- Updated dependencies [[`bd98256`](https://github.com/yuukoyoung/yuuko-design/commit/bd98256f8b81b115bd9d0fabac98c34c130f12d9), [`639ba45`](https://github.com/yuukoyoung/yuuko-design/commit/639ba45eaabadd62f6e19f883763225f0977570b)]:
+  - @yuukoyoung/utils@0.3.0
+
 ## 0.2.1
 
 ### Patch Changes
