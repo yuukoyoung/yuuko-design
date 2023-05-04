@@ -44,6 +44,9 @@ export default {
       control: 'inline-radio',
       options: ['none', 'small', 'medium', 'large', 'full'],
     },
+    as: {
+      control: 'text',
+    },
     // slots
     default: {
       control: 'text',
@@ -53,24 +56,23 @@ export default {
         },
       },
     },
+    // emits
+    onClick: {},
   },
   args: {
     // props
-    as: 'button',
     variant: 'filled',
     color: 'blue',
     size: 'medium',
     compact: false,
     radius: 'medium',
     disabled: false,
+    as: 'button',
     // slots
     default: 'Button',
   },
   parameters: {
-    controls: { expanded: true, exclude: ['as'] },
-    actions: {
-      handles: ['click', 'keydown', 'keyup'],
-    },
+    controls: { expanded: true, exclude: [] },
   },
 } as Meta<typeof YuButton>;
 

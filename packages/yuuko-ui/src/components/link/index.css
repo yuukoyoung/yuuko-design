@@ -1,0 +1,11 @@
+/* base */
+.yu-link {
+  @apply outline-none transition-all hover:cursor-pointer hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  @apply disabled:cursor-not-allowed disabled:text-inherit  disabled:opacity-60 aria-disabled:cursor-not-allowed aria-disabled:text-inherit aria-disabled:opacity-60;
+
+  /* underline */
+  &.yu-link--underline {
+    @apply hover:underline;
+    @apply disabled:no-underline aria-disabled:no-underline;
+  }
+}
