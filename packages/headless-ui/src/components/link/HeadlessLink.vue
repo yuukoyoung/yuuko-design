@@ -1,9 +1,16 @@
 <script lang="ts">
-import { defineComponent, onUpdated, ref, triggerRef, withDefaults } from 'vue';
-import { useButton } from '@yuukoyoung/composables';
+import {
+  computed,
+  defineComponent,
+  onUpdated,
+  ref,
+  triggerRef,
+  withDefaults,
+} from 'vue';
+import { useLink } from '@yuukoyoung/composables';
 
 export default defineComponent({
-  name: 'HeadlessButton',
+  name: 'HeadlessLink',
 });
 </script>
 
@@ -19,10 +26,14 @@ onUpdated(() => {
 const props = withDefaults(
   defineProps<{
     as?: string;
+    href: string;
+    external?: boolean;
     disabled?: boolean;
   }>(),
   {
-    as: 'button',
+    as: 'a',
+    href: '',
+    external: false,
     disabled: false,
   },
 );
@@ -43,14 +54,26 @@ function handleClick() {
 // setup return
 const {
   role,
-  type,
+  href: _href,
+  dataHref,
   disabled: _disabled,
   ariaDisabled,
   handleKeydown,
-  handleKeyup,
   tabindex,
-} = useButton(element, {
+} = useLink(element, {
   disabled: () => props.disabled,
+  href: () => props.href,
+});
+
+const otherAttrs = computed(() => {
+  if (props.external) {
+    return {
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    };
+  }
+
+  return undefined;
 });
 </script>
 
@@ -59,13 +82,14 @@ const {
     :is="as"
     ref="element"
     :role="role"
-    :type="type"
+    :href="_href"
+    :data-href="dataHref"
     :disabled="_disabled"
     :aria-disabled="ariaDisabled"
     :tabindex="tabindex"
+    v-bind="otherAttrs"
     @click="handleClick"
-    @keydown="handleKeydown"
-    @keyup="handleKeyup">
+    @keydown="handleKeydown">
     <slot></slot>
   </component>
 </template>
