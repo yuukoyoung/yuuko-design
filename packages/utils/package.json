@@ -23,18 +23,18 @@
     "**/dist",
     "CHANGELOG.md"
   ],
-  "main": "./dist/utils.cjs.js",
-  "module": "./dist/utils.es.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/es/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/utils.cjs.js",
-      "import": "./dist/utils.es.js"
+      "require": "./dist/lib/index.js",
+      "import": "./dist/es/index.mjs"
     }
   },
   "sideEffects": false,
   "scripts": {
-    "build": "vite build && tsc --project ./tsconfig.build.json",
+    "build": "vite build",
     "build:clean": "rimraf ./dist",
     "prepack": "turbo run build --filter=@yuukoyoung/utils --cwd=../..",
     "test": "vitest run",
@@ -52,6 +52,7 @@
     "rimraf": "3.0.2",
     "typescript": "4.5.4",
     "vite": "3.2.0",
+    "vite-plugin-dts": "2.3.0",
     "vitest": "0.23.1"
   }
 }

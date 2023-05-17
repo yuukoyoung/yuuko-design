@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitest/config';
-import path from 'path';
+import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,11 +14,37 @@ export default defineConfig({
     },
     cache: { dir: 'node_modules/.vitest' },
   },
+  plugins: [
+    dts({
+      entryRoot: './src',
+      outputDir: ['./dist/es', './dist/lib'],
+    }),
+  ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, './src/index.ts'),
+      entry: './src/index.ts',
       formats: ['cjs', 'es'],
-      fileName: (format) => `utils.${format}.js`,
+    },
+    rollupOptions: {
+      input: ['./src/index.ts'],
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: true,
+          preserveModulesRoot: './src',
+          exports: 'named',
+          dir: './dist/es',
+        },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].js',
+          preserveModules: true,
+          preserveModulesRoot: './src',
+          exports: 'named',
+          dir: './dist/lib',
+        },
+      ],
     },
   },
 });
