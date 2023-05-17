@@ -1,5 +1,12 @@
 # @yuukoyoung/composables
 
+## 0.3.1
+
+### Patch Changes
+
+- Updated dependencies [[`8ce67ce`](https://github.com/yuukoyoung/yuuko-design/commit/8ce67cec0892e8bb78918ff277886f92a0110fb2)]:
+  - @yuukoyoung/utils@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @yuukoyoung/utils
 
+## 0.3.1
+
+### Patch Changes
+
+- [#34](https://github.com/yuukoyoung/yuuko-design/pull/34) [`8ce67ce`](https://github.com/yuukoyoung/yuuko-design/commit/8ce67cec0892e8bb78918ff277886f92a0110fb2) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - update types
+
 ## 0.3.0
 
 ### Minor Changes
