@@ -23,22 +23,13 @@
     "**/dist",
     "CHANGELOG.md"
   ],
-  "main": "./dist/yuuko-ui.cjs.js",
-  "module": "./dist/yuuko-ui.es.js",
-  "browser": "./dist/yuuko-ui.umd.js",
-  "types": "./dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/yuuko-ui.cjs.js",
-      "import": "./dist/yuuko-ui.es.js"
-    },
-    "./css": "./dist/yuuko-ui.css",
-    "./global": "./global.d.ts"
-  },
+  "main": "./dist/lib/index.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/es/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "build": "pnpm run build:js && pnpm run build:css",
-    "build:js": "vue-tsc --noEmit && vite build && vue-tsc --project tsconfig.build.json",
+    "build:js": "vue-tsc --noEmit && vite build",
     "build:css": "tailwindcss --input ./src/style/index.css --output ./dist/yuuko-ui.css --postcss --minify --config ./tailwind.config.cjs",
     "build:css:watch": "tailwindcss --input ./src/style/index.css --output ./dist/yuuko-ui.css --watch --postcss --minify --config ./tailwind.config.cjs",
     "build:clean": "rimraf ./dist",
@@ -74,8 +65,9 @@
     "rimraf": "3.0.2",
     "storybook": "7.0.6",
     "tailwindcss": "3.2.4",
-    "typescript": "4.5.4",
+    "typescript": "5.0.4",
     "vite": "3.2.0",
+    "vite-plugin-dts": "2.3.0",
     "vite-plugin-static-copy": "0.14.0",
     "vue-tsc": "1.6.3"
   }

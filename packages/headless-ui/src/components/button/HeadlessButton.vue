@@ -1,10 +1,10 @@
 <script lang="ts">
-import { defineComponent, onUpdated, ref, triggerRef, withDefaults } from 'vue';
+import { onUpdated, ref, triggerRef, withDefaults } from 'vue';
 import { useButton } from '@yuukoyoung/composables';
 
-export default defineComponent({
+export default {
   name: 'HeadlessButton',
-});
+};
 </script>
 
 <script lang="ts" setup>

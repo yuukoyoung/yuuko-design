@@ -1,8 +1,8 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed } from 'vue';
 import { HeadlessButton } from '@yuukoyoung/headless-ui';
 
-export default defineComponent({ name: 'YuButton' });
+export default { name: 'YuButton' };
 </script>
 
 <script lang="ts" setup>

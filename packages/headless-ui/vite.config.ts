@@ -1,24 +1,47 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
+import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    dts({
+      entryRoot: './src',
+      outputDir: ['./dist/es', './dist/lib'],
+    }),
+  ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, './src/index.ts'),
-      name: 'HeadlessUI',
-      formats: ['cjs', 'es', 'umd'],
-      fileName: (format) => `headless-ui.${format}.js`,
+      entry: './src/index.ts',
+      formats: ['cjs', 'es'],
     },
     rollupOptions: {
       external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue',
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: true,
+          preserveModulesRoot: './src',
+          exports: 'named',
+          dir: './dist/es',
+          globals: {
+            vue: 'Vue',
+          },
         },
-      },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].js',
+          preserveModules: true,
+          preserveModulesRoot: './src',
+          exports: 'named',
+          dir: './dist/lib',
+          globals: {
+            vue: 'Vue',
+          },
+        },
+      ],
     },
   },
 });
