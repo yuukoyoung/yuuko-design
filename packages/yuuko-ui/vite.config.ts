@@ -1,16 +1,20 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    dts({
+      entryRoot: './src',
+      outputDir: ['./dist/es', './dist/lib'],
+    }),
     viteStaticCopy({
       targets: [
         {
-          src: 'types/global.d.ts',
+          src: './types/global.d.ts',
           dest: '.',
         },
       ],
@@ -18,19 +22,36 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, './src/index.ts'),
-      name: 'YuukoUI',
-      formats: ['cjs', 'es', 'umd'],
-      fileName: (format) => `yuuko-ui.${format}.js`,
+      entry: './src/index.ts',
+      formats: ['cjs', 'es'],
     },
     emptyOutDir: false,
     rollupOptions: {
       external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue',
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: true,
+          preserveModulesRoot: './src',
+          exports: 'named',
+          dir: './dist/es',
+          globals: {
+            vue: 'Vue',
+          },
         },
-      },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].js',
+          preserveModules: true,
+          preserveModulesRoot: './src',
+          exports: 'named',
+          dir: './dist/lib',
+          globals: {
+            vue: 'Vue',
+          },
+        },
+      ],
     },
   },
 });

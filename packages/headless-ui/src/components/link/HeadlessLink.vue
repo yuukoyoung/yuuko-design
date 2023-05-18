@@ -1,17 +1,10 @@
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  onUpdated,
-  ref,
-  triggerRef,
-  withDefaults,
-} from 'vue';
+import { computed, onUpdated, ref, triggerRef, withDefaults } from 'vue';
 import { useLink } from '@yuukoyoung/composables';
 
-export default defineComponent({
+export default {
   name: 'HeadlessLink',
-});
+};
 </script>
 
 <script lang="ts" setup>
