@@ -1,5 +1,15 @@
 # @yuukoyoung/yuuko-ui
 
+## 0.2.2
+
+### Patch Changes
+
+- [#36](https://github.com/yuukoyoung/yuuko-design/pull/36) [`978a596`](https://github.com/yuukoyoung/yuuko-design/commit/978a596288d9bb6ecda23ff5fa583a52402ca3ce) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - upgrade typescript
+
+- Updated dependencies [[`978a596`](https://github.com/yuukoyoung/yuuko-design/commit/978a596288d9bb6ecda23ff5fa583a52402ca3ce)]:
+  - @yuukoyoung/headless-ui@0.3.2
+  - @yuukoyoung/utils@0.3.2
+
 ## 0.2.1
 
 ### Patch Changes

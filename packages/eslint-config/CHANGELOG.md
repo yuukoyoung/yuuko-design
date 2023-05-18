@@ -1,5 +1,11 @@
 # @yuukoyoung/eslint-config
 
+## 0.5.1
+
+### Patch Changes
+
+- [#36](https://github.com/yuukoyoung/yuuko-design/pull/36) [`978a596`](https://github.com/yuukoyoung/yuuko-design/commit/978a596288d9bb6ecda23ff5fa583a52402ca3ce) Thanks [@yuukoyoung](https://github.com/yuukoyoung)! - upgrade typescript
+
 ## 0.5.0
 
 ### Minor Changes
