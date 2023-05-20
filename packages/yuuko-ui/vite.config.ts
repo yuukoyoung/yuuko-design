@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,14 +9,6 @@ export default defineConfig({
     dts({
       entryRoot: './src',
       outputDir: ['./dist/es', './dist/lib'],
-    }),
-    viteStaticCopy({
-      targets: [
-        {
-          src: './types/global.d.ts',
-          dest: '.',
-        },
-      ],
     }),
   ],
   build: {

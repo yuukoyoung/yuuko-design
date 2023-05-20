@@ -21,11 +21,20 @@
   },
   "files": [
     "**/dist",
+    "global.d.ts",
     "CHANGELOG.md"
   ],
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.mjs",
   "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/lib/index.js"
+    },
+    "./css": "./dist/yuuko-ui.css",
+    "./global": "./global.d.ts"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "pnpm run build:js && pnpm run build:css",
@@ -68,7 +77,6 @@
     "typescript": "5.0.4",
     "vite": "3.2.0",
     "vite-plugin-dts": "2.3.0",
-    "vite-plugin-static-copy": "0.14.0",
     "vue-tsc": "1.6.3"
   }
 }
